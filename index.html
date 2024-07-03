@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toogle event</title>
+</head>
+<style>
+    body {
+        background: #000000;
+        color: #eeff00;
+        font-family: monospace, ubuntu, 'Arial Narrow Bold', sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 2em;
+    }
+    img {
+        max-height: 280px;
+    }
+    button {
+        background: #eeff00;
+        border-radius: 0.5em;
+        color: #000000;
+        font-size: 1rem;
+        font-weight: 900;
+        padding: 0.5em;
+        transition: all 1s linear, transform 3s linear;;
+    }
+    button:hover {
+        animation: a_name 1s ease-out forwards;
+        transition: all 3s linear;
+        background: #eeff00;
+    }
+    @keyframes a_name {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(10px);
+            padding: 0.5em 2em;
+        }
+    }
+    section {
+        margin: 1em 0;
+    }
+    .hidden {
+        display: none;
+    }
+    h3 {
+        color: #ffffff;
+        font-size: 0.8rem;
+        position: absolute;
+        bottom: 2em;
+    }
+</style>
+<body>
+    <h1>Learning JS with Juan David Castro</h1>
+    <p>
+        <strong>
+            When you click on the button:
+        </strong>
+    </p>
+    <ul>
+        <li>CSS => have an animation and a transition.</li>
+        <li>A img appears with a toggle function() => </li>
+        <li>A setTimeout() takes action making dissapear the image 5 seconds after the click.</li>
+    </ul>
+    <button type="button" id="toggleButton">
+        Show me the img >>
+    </button>
+    <section>
+        <img src="./What-Is-JavaScript-Used-For.png" alt="" class="toggle hidden">
+    </section>
+    <section>
+        <h3>
+            Made by Yako | White Panda Space
+        </h3>
+    </section>
+    <script>
+        document.querySelector('#toggleButton').addEventListener('click', () => {
+            document.querySelector('.toggle').classList.toggle('hidden');
+            setTimeout(() => {
+                document.querySelector('.toggle').classList.add('hidden');
+            },5000);
+        });
+    </script>
+</body>
+</html>
