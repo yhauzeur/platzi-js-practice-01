@@ -24,7 +24,7 @@
         font-size: 1rem;
         font-weight: 900;
         padding: 0.5em;
-        transition: all 1s linear, transform 3s linear;;
+        transition: all 1s linear, transform 3s linear;
     }
     button:hover {
         animation: a_name 1s ease-out forwards;
@@ -62,8 +62,8 @@
     </p>
     <ul>
         <li>CSS => have an animation and a transition.</li>
-        <li>A img appears with a toggle function() => </li>
-        <li>A setTimeout() takes action making dissapear the image 5 seconds after the click.</li>
+        <li>A &lt;img/&gt; appears with a toggle function() => </li>
+        <li>A setTimeout() takes action making dissapear the image 10 seconds after the click.</li>
     </ul>
     <button type="button" id="toggleButton">
         Show me the img >>
@@ -81,7 +81,7 @@
             document.querySelector('.toggle').classList.toggle('hidden');
             setTimeout(() => {
                 document.querySelector('.toggle').classList.add('hidden');
-            },5000);
+            },10000);
         });
     </script>
 </body>
